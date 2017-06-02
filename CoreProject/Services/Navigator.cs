@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace CoreProject.Services
 {
@@ -13,24 +14,36 @@ namespace CoreProject.Services
         private readonly IPage _page;
         private readonly IViewFactory _viewFactory;
 
-        public Navigator(IPage page,IViewFactory viewFactory)
+        public Navigator(IPage page, IViewFactory viewFactory)
         {
             _page = page;
             _viewFactory = viewFactory;
         }
-        public Task<IViewModel> PopAsync()
+        private INavigation Navigation
         {
-            throw new NotImplementedException();
+            get { return _page.Navigation; }
+        }
+        public async Task<IViewModel> PopAsync()
+        {
+            Page view = await Navigation.PopAsync();
+            var viewModel = view.BindingContext as IViewModel;
+            viewModel.NavigatedFrom();
+            return viewModel;
+        }
+       
+
+        public async Task<IViewModel> PopModelAsync()
+        {
+            Page view = await Navigation.PopModalAsync();
+            var viewModel = view.BindingContext as IViewModel;
+            viewModel.NavigatedFrom();
+            return viewModel;
         }
 
-        public Task<IViewModel> PopModelAsync()
+        public async Task PopToRootAsync()
         {
-            throw new NotImplementedException();
-        }
+            await Navigation.PopToRootAsync();
 
-        public Task<IViewModel> PopToRootAsync()
-        {
-            throw new NotImplementedException();
         }
 
         Task<TViewModel> INavigator.PushAsync<TViewModel>(TViewModel viewModel)
@@ -50,7 +63,7 @@ namespace CoreProject.Services
 
         Task<TViewModel> INavigator.PushModelAsync<TViewModel>(TViewModel viewModel)
         {
-            throw new NotImplementedException();  
+            throw new NotImplementedException();
         }
 
         Task<TViewModel> INavigator.PushModelAsync<TViewModel>(Action<TViewModel> setStateAction)

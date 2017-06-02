@@ -10,7 +10,7 @@ namespace CoreProject.Interface
     {
         Task<IViewModel> PopAsync();
         Task<IViewModel> PopModelAsync();
-        Task<IViewModel> PopToRootAsync();
+        Task PopToRootAsync();
         Task<TViewModel> PushAsync<TViewModel>(Action<TViewModel> setStateAction = null) where TViewModel : class, IViewModel;
         TViewModel PushAsyncmasterDetailsPage<TViewModel>(Action<TViewModel> setStateAction = null) where TViewModel : class, IViewModel;
         Task<TViewModel> PushAsync<TViewModel>(TViewModel viewModel) where TViewModel : class, IViewModel;
