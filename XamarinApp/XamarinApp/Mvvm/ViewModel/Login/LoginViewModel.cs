@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace XamarinApp.Mvvm.ViewModel.Login
 {
-    class LoginViewModel
+ public   class LoginViewModel: CoreProject.ViewModel.ViewModelBase
     {
+
     }
 }

@@ -28,7 +28,7 @@ namespace XamarinApp.WinPhone
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
-            LoadApplication(new XamarinApp.App());
+          //  LoadApplication(new XamarinApp.App());
         }
 
         /// <summary>

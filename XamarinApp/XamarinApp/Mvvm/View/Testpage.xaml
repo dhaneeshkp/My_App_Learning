@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:HeaderContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:local="clr-namespace:XamarinApp.Mvvm.View;XamarinApp"
+             x:Class="XamarinApp.Mvvm.View.Testpage"   
+     BackgroundColor="Blue">
+    <!--<StackLayout VerticalOptions="CenterAndExpand">
+      <Label Text="Welcome to the app!" HorizontalOptions="Center" />
+      <Button Text="Change Theme" Clicked="OnButtonClicked" />
+    </StackLayout>-->
+  <local:HeaderContentPage.MainContent>
+    <StackLayout VerticalOptions="CenterAndExpand" >
+      <Label Text="Welcome to the app!" HorizontalOptions="Center" />
+      <Button Text="Change Theme" Clicked="OnButtonClicked" />
+    </StackLayout>
+  </local:HeaderContentPage.MainContent>
+</local:HeaderContentPage>

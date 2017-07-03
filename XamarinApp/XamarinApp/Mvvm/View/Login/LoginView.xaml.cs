@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace XamarinApp.Mvvm.View.Login
 {
-    public partial class LoginView : ContentPage
+    public partial class LoginView : TabbedPage
     {
         public LoginView()
         {

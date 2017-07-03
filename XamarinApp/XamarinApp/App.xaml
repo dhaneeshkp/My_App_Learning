@@ -3,7 +3,59 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinApp.App">
   <Application.Resources>
-
+    <!--ResourceDictionary>
+      <ControlTemplate>
+        
+      </ControlTemplate>
+    </ResourceDictionary>-->
+    <!--<ResourceDictionary>
+      <ControlTemplate x:Key="MainPageTemplate">
+        <StackLayout>
+          <Label Text="Header Content" FontSize="24" />
+          <ContentPresenter />
+        </StackLayout>
+      </ControlTemplate>
+    </ResourceDictionary>-->
+    <ResourceDictionary>
+      <ControlTemplate x:Key="TealTemplate">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.8*" />
+            <RowDefinition Height="0.1*" />
+          </Grid.RowDefinitions>
+          <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.05*" />
+            <ColumnDefinition Width="0.95*" />
+          </Grid.ColumnDefinitions>-->
+          <BoxView Grid.ColumnSpan="2" Color="Teal" />
+          <Label Grid.Column="1" Text="{TemplateBinding  HeaderText}" TextColor="White" VerticalOptions="Center" />
+          <ContentPresenter Grid.Row="1" Grid.ColumnSpan="2" />
+          <BoxView Grid.Row="2" Grid.ColumnSpan="2" Color="Teal" />
+          <Label Grid.Row="2" Grid.Column="1" Text="{TemplateBinding  FooterText}" TextColor="White" VerticalOptions="Center" />
+        </Grid>
+      </ControlTemplate>
+      <ControlTemplate x:Key="AquaTemplate">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.8*" />
+            <RowDefinition Height="0.1*" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.05*" />
+            <ColumnDefinition Width="0.95*" />
+          </Grid.ColumnDefinitions>
+          <BoxView Grid.ColumnSpan="2" Color="Aqua" />
+          <Label Grid.Column="1" Text="{TemplateBinding Parent.HeaderText}" TextColor="Blue" VerticalOptions="Center" />
+          <ContentPresenter Grid.Row="1" Grid.ColumnSpan="2" />
+          <BoxView Grid.Row="2" Grid.ColumnSpan="2" Color="Aqua" />
+          <Label Grid.Row="2" Grid.Column="1" Text="{TemplateBinding Parent.FooterText}" TextColor="Blue" VerticalOptions="Center" />
+        </Grid>
+        
+      </ControlTemplate>
+    </ResourceDictionary>
+    
     <!-- Application resource dictionary -->
 
   </Application.Resources>

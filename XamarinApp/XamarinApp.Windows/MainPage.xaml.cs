@@ -21,7 +21,7 @@ namespace XamarinApp.Windows
         {
             this.InitializeComponent();
 
-            LoadApplication(new XamarinApp.App());
+           // LoadApplication(new XamarinApp.App());
         }
     }
 }
