@@ -53,7 +53,7 @@
     <Compile Include="Mvvm\View\Login\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Mvvm\View\MasterPage.xaml.cs">
+    <Compile Include="Services\MasterPage.xaml.cs">
       <DependentUpon>MasterPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\View\Testpage.xaml.cs">
@@ -118,7 +118,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Mvvm\View\MasterPage.xaml">
+    <EmbeddedResource Include="Services\MasterPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

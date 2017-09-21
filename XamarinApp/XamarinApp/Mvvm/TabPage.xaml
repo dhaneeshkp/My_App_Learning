@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinApp.Mvvm.TabPage"  >
   <ContentPage>
+        <WebView Source="https://www.google.co.in"></WebView>
     <Label Text="sss"></Label>
   </ContentPage>
   <ContentPage>

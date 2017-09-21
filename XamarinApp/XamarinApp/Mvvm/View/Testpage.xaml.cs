@@ -11,6 +11,7 @@ namespace XamarinApp.Mvvm.View
     public partial class Testpage 
     {
      
+        
         bool originalTemplate = true;
         ControlTemplate tealTemplate;
         ControlTemplate aquaTemplate;
@@ -31,9 +32,9 @@ namespace XamarinApp.Mvvm.View
         public Testpage()
         {
             InitializeComponent();
-
-            tealTemplate = (ControlTemplate)Application.Current.Resources["TealTemplate"];
-            aquaTemplate = (ControlTemplate)Application.Current.Resources["AquaTemplate"];
+            
+          //  tealTemplate = (ControlTemplate)Application.Current.Resources["TealTemplate"];
+          //  aquaTemplate = (ControlTemplate)Application.Current.Resources["AquaTemplate"];
         }
 
         void OnButtonClicked(object sender, EventArgs e)

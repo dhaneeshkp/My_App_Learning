@@ -9,7 +9,10 @@
       <Button Text="Change Theme" Clicked="OnButtonClicked" />
     </StackLayout>-->
   <local:HeaderContentPage.MainContent>
-    <StackLayout VerticalOptions="CenterAndExpand" >
+      
+    <StackLayout HorizontalOptions="FillAndExpand" >
+            <WebView BindingContext="{Binding urlContent}"></WebView>
+            
       <Label Text="Welcome to the app!" HorizontalOptions="Center" />
       <Button Text="Change Theme" Clicked="OnButtonClicked" />
     </StackLayout>
